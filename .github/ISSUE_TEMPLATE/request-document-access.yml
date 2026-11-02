@@ -1,0 +1,31 @@
+name: Permintaan akses dokumentasi SDLC
+description: Ajukan akses individual ke dokumentasi Mydringkas yang disimpan secara privat.
+title: "[Permintaan akses dokumen] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Permintaan ini akan menjadi issue publik. Jangan cantumkan alamat email, nomor telepon, kata sandi, token, atau informasi pribadi lainnya.
+  - type: input
+    id: github-username
+    attributes:
+      label: Nama pengguna GitHub
+      description: Akun ini akan digunakan untuk undangan akses repositori privat jika permintaan disetujui.
+      placeholder: username-github-anda
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Tujuan penggunaan
+      description: Jelaskan bagian dokumen yang dibutuhkan dan konteks penggunaannya.
+      placeholder: Saya ingin melihat dokumentasi untuk ...
+    validations:
+      required: true
+  - type: checkboxes
+    id: copyright
+    attributes:
+      label: Persetujuan penggunaan
+      options:
+        - label: Saya memahami akses memerlukan persetujuan pemilik, dokumen dilindungi hak cipta, dan akses yang diberikan tidak mengizinkan penyalinan atau distribusi ulang.
+          required: true
